@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Database"
+  short_description: "Schema and migration work for the repo"
+  default_prompt: "Use $project-database to implement schema or migration changes and verify them correctly."
+
+policy:
+  allow_implicit_invocation: true
+

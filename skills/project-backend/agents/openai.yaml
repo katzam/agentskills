@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Backend"
+  short_description: "Backend and API work for the repo"
+  default_prompt: "Use $project-backend to implement or update backend code and the required backend validation."
+
+policy:
+  allow_implicit_invocation: true
+

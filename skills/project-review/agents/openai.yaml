@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Review"
+  short_description: "Validation and risk review for the repo"
+  default_prompt: "Use $project-review to verify the task outcome, validations, standards compliance, and remaining risks before handoff."
+
+policy:
+  allow_implicit_invocation: true
+

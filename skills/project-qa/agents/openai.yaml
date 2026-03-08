@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project QA"
+  short_description: "Browser and runtime verification for the repo"
+  default_prompt: "Use $project-qa to verify features with the repo QA wrappers, runtime checks, and artifact capture."
+
+policy:
+  allow_implicit_invocation: true
+

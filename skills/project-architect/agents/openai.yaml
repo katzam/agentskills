@@ -1,0 +1,8 @@
+interface:
+  display_name: "Project Architect"
+  short_description: "Cross-domain impact analysis for the repo"
+  default_prompt: "Use $project-architect to map the impacted domains, files, interfaces, and validations for this task."
+
+policy:
+  allow_implicit_invocation: true
+
