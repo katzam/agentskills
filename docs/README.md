@@ -10,7 +10,7 @@ This index defines where canonical engineering, requirements, and workflow conte
 - Durable task briefs: `tasks/open/*` and `tasks/completed/*`
 - Plain-language development workflow: [docs/agent-skill-task-guide.md](agent-skill-task-guide.md)
 - Architecture and code ownership: [docs/architecture/repo-map.md](architecture/repo-map.md)
-- Codex skill framework: [docs/architecture/codex-skill-framework.md](architecture/codex-skill-framework.md)
+- Agent skill framework: [docs/architecture/codex-skill-framework.md](architecture/codex-skill-framework.md)
 - Coding standards: `docs/architecture/standards/*`
 - Repository operating notes: [AGENTS.md](../AGENTS.md)
 

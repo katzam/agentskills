@@ -1,7 +1,10 @@
 # Project Repository Notes
 
 ## Scope
-This repository uses repo-managed Codex skills under `skills/`, but the main Codex agent remains the only orchestrator. Skills are lightweight repo guidance, not workflow stages or agent handoff payloads.
+This repository uses repo-managed agent skills under `skills/`, and the main coding agent remains the only orchestrator. Skills are lightweight repo guidance, not workflow stages or agent handoff payloads.
+
+Codex can use the canonical skills under `skills/` directly.
+Claude Code should use `CLAUDE.md` plus `.claude/commands/*` to reach the same canonical skills without duplicating their content.
 
 ## Repo-Local Skill Bootstrap
 - Treat the repo-local skills under `skills/` as mandatory guidance for this repository.
@@ -50,7 +53,7 @@ This repository uses repo-managed Codex skills under `skills/`, but the main Cod
 | Frontend changes | Replace with the repo's frontend lint and build commands |
 | Backend changes | Replace with the repo's backend test command |
 | Runtime DB apply/verify | Replace with the repo's schema apply and verify command |
-| Codex skill changes | `bash scripts/codex/validate-skills.sh` |
+| Skill changes | `bash scripts/skills/validate-skills.sh` |
 | Bash script changes | `bash -n <script-path>` |
 
 ## Definition Of Done

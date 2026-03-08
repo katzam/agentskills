@@ -1,6 +1,6 @@
 ---
 name: project-architect
-description: Repo-specific planning and impact analysis for this project. Use when a task spans multiple domains, the right files are unclear, API, UI, and data changes must be coordinated, requirement sources must be traced, or Codex needs to decide what frontend, backend, database, docs, scripts, or skill work is required before implementation.
+description: Repo-specific planning and impact analysis for this project. Use when a task spans multiple domains, the right files are unclear, API, UI, and data changes must be coordinated, requirement sources must be traced, or the agent needs to decide what frontend, backend, database, docs, scripts, or skill work is required before implementation.
 ---
 
 Ground the task in the repo before proposing changes.
@@ -45,4 +45,4 @@ When writing verification rules, prefer concrete pass or fail statements plus th
 
 6. Do not create workflow graphs, handoff schemas, planner artifacts, or skill-to-skill payload contracts. Keep durable briefs in `tasks/*` and temporary notes in untracked `handoffs/*`.
 
-7. Keep output compact and implementation-oriented. The goal is to help the main Codex agent move into coding quickly.
+7. Keep output compact and implementation-oriented. The goal is to help the main agent move into coding quickly.

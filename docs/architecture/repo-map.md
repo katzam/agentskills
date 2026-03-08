@@ -30,7 +30,8 @@ Replace the placeholders below with concrete paths before relying on the framewo
 - Seed or fixture data: `<replace-with-seed-paths>`
 
 ## Scripts
-- Codex skill helpers: `scripts/codex/*`
+- Skill helpers: `scripts/skills/*`
+- Codex compatibility helpers: `scripts/codex/*`
 - Task helpers: `scripts/tasks/*`
 - Docs helpers: `scripts/docs/*`
 - Runtime, database, or QA wrappers: `<replace-with-app-specific-script-paths>`
@@ -41,4 +42,3 @@ Replace the placeholders below with concrete paths before relying on the framewo
 - Architecture reference docs: `docs/architecture/*`
 - Task briefs: `tasks/*`
 - Repository operating notes: `AGENTS.md`
-

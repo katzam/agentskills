@@ -4,11 +4,12 @@ This repository is a genericized starter extracted from the Ankora project.
 
 It keeps the useful parts of that setup:
 
-- one main Codex agent
+- one main coding agent
 - repo-local skills under `skills/`
 - durable task briefs under `tasks/`
 - lightweight docs that explain the workflow
 - simple validation scripts for skills and task briefs
+- Claude Code compatibility via `CLAUDE.md` and `.claude/commands/`
 
 The goal is to give another app repo a small, repeatable framework for AI-assisted development without turning the repo into a workflow engine.
 
@@ -18,7 +19,8 @@ The goal is to give another app repo a small, repeatable framework for AI-assist
 - `docs/`: framework docs, standards templates, and requirement-source guidance
 - `skills/`: generic architect, frontend, backend, database, docs, QA, and review skills
 - `tasks/`: durable task-brief structure and template
-- `scripts/codex/`: skill validation helpers
+- `scripts/skills/`: tool-neutral skill validation helpers
+- `scripts/codex/`: compatibility wrapper for the original validator path
 - `scripts/tasks/`: task-brief readiness check
 - `scripts/docs/`: optional DOCX-to-Markdown requirement mirror helper
 
@@ -29,12 +31,18 @@ The goal is to give another app repo a small, repeatable framework for AI-assist
 3. Replace the placeholder validation commands in [AGENTS.md](AGENTS.md).
 4. Customize the standards under [docs/architecture/standards](docs/architecture/standards).
 5. Rename `project-*` skills if you want app-specific names.
-6. Run `bash scripts/codex/validate-skills.sh`.
+6. Run `bash scripts/skills/validate-skills.sh`.
 
 ## Design Rules
 
 - Skills are repo-local guidance, not separate workers.
-- The main Codex agent stays responsible for the task from start to finish.
+- The main coding agent stays responsible for the task from start to finish.
 - Task briefs are the durable source for implementation-ready work.
 - Standards docs stay canonical; skills should point to them instead of duplicating them.
 - Keep the framework small enough that another app can adopt it quickly.
+
+## Tool Support
+
+- Codex can use the canonical repo skills under `skills/`.
+- Claude Code can use the same canonical skills through `CLAUDE.md` plus the project slash commands under `.claude/commands/`.
+- The canonical skill content should live only once under `skills/`.

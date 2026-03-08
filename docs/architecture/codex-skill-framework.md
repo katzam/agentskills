@@ -1,22 +1,28 @@
-# Codex Skill Framework
+# Agent Skill Framework
 
 ## Purpose
 
-This framework uses repo-owned Codex skills to keep implementation aligned with project conventions without introducing a workflow engine.
+This framework uses repo-owned skills to keep implementation aligned with project conventions without introducing a workflow engine.
 
-Skills live under `skills/`, standards live under `docs/architecture/standards/`, and the main Codex agent remains the only orchestrator.
+Skills live under `skills/`, standards live under `docs/architecture/standards/`, and the main coding agent remains the only orchestrator.
 
 For a non-technical overview of how the agent, skills, and task briefs work together, see [docs/agent-skill-task-guide.md](../agent-skill-task-guide.md).
 
 ## Core Model
 
 - User prompts stay in plain language.
-- The main Codex agent selects the relevant skill or skills.
+- The main coding agent selects the relevant skill or skills.
 - Skills provide lightweight repo-specific guidance and never invoke each other.
 - Standards docs are the canonical source of implementation rules.
 - Scratchpads are optional, task-scoped, and untracked.
 - Reasoning certificates are selective and only required for analysis-heavy or high-risk claims.
 - Per-skill memory notes are limited to recurring, reusable domain lessons after verified fixes or settled conventions.
+
+## Tool Support
+
+- Codex can use the canonical repo-local skills under `skills/`.
+- Claude Code can use the same canonical skills through `CLAUDE.md` and project slash commands under `.claude/commands/`.
+- The canonical skill content should stay under `skills/`; Claude support should point to those files rather than duplicate their logic by hand.
 
 ## Repo-Local Skill Availability
 
@@ -46,7 +52,7 @@ Standards docs are canonical. Skills should summarize or point to them, not dupl
 
 ## Main-Agent Selection Rules
 
-- The main Codex agent is the only orchestrator.
+- The main coding agent is the only orchestrator.
 - At the start of every new thread in this repository, select and read at least one relevant `skills/project-*/SKILL.md` file before substantial work begins.
 - Start with `project-architect` when a task is ambiguous, cross-domain, or risky.
 - Start directly with a domain skill for obvious single-domain work.
@@ -69,7 +75,7 @@ Use an optional scratchpad only for substantial, cross-domain, or multi-session 
 
 - path: `handoffs/<task-id>/scratchpad.md`
 - git policy: untracked
-- owner: main Codex agent
+- owner: main coding agent
 - purpose: carry current task state, not standards or durable knowledge
 
 Suggested scratchpad shape:
@@ -135,7 +141,7 @@ Use reasoning certificates selectively:
 - validate all skills:
 
 ```bash
-bash scripts/codex/validate-skills.sh
+bash scripts/skills/validate-skills.sh
 ```
 
 - validate that open task briefs have no unresolved open questions:

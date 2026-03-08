@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document explains, in plain language, how this framework uses the Codex agent, repo skills, and task files to manage development work.
+This document explains, in plain language, how this framework uses the main coding agent, repo skills, and task files to manage development work.
 
 The short version is:
 
